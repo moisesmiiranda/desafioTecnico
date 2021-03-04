@@ -1,13 +1,13 @@
-package com.moisesmiiranda.desafiotecnico;
+package com.testetecnicomuxi.teste;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DesafioTecnicoApplicationTests {
+class TesteApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
