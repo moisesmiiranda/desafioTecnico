@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.testetecnicomuxi.teste.domain;
 
 import org.springframework.data.annotation.Id;
@@ -12,6 +13,21 @@ public class Application implements Serializable {
 
     @Id
     private long id;
+=======
+package com.testetecnicomuxi.teste.dto;
+
+import java.io.Serializable;
+
+<<<<<<< HEAD:src/main/java/com/testetecnicomuxi/teste/dto/ApplicationDTO.java
+public class ApplicationDTO implements Serializable {
+
+    private long id;
+
+=======
+public class Application implements Serializable {
+    private static final long serialVersionUID = 1L;
+>>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16:src/main/java/com/testetecnicomuxi/teste/domain/Application.java
+>>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16
     private Integer logic;
     private String serial;
     private String model;
@@ -23,12 +39,29 @@ public class Application implements Serializable {
     private Integer mxf;
     private String verfm;
 
+<<<<<<< HEAD
     public Application() {
 
     }
 
     public Application(long id, Integer logic, String serial, String model, Integer sam, String ptid, Integer plat, String version, Integer mxr, Integer mxf, String verfm) {
         this.id = id;
+=======
+<<<<<<< HEAD:src/main/java/com/testetecnicomuxi/teste/dto/ApplicationDTO.java
+    public ApplicationDTO(){
+
+    }
+
+    public ApplicationDTO(long id, Integer logic, String serial, String model, Integer sam, String ptid, Integer plat, String version, Integer mxr, Integer mxf, String verfm) {
+        this.id = id;
+=======
+    public Application(){
+
+    }
+
+    public Application(Integer logic, String serial, String model, Integer sam, String ptid, Integer plat, String version, Integer mxr, Integer mxf, String verfm) {
+>>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16:src/main/java/com/testetecnicomuxi/teste/domain/Application.java
+>>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16
         this.logic = logic;
         this.serial = serial;
         this.model = model;
@@ -128,17 +161,28 @@ public class Application implements Serializable {
     public void setVerfm(String verfm) {
         this.verfm = verfm;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/main/java/com/testetecnicomuxi/teste/dto/ApplicationDTO.java
+=======
+>>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+<<<<<<< HEAD
         Application that = (Application) o;
         return id == that.id && Objects.equals(logic, that.logic) && Objects.equals(serial, that.serial) && Objects.equals(model, that.model) && Objects.equals(sam, that.sam) && Objects.equals(ptid, that.ptid) && Objects.equals(plat, that.plat) && Objects.equals(version, that.version) && Objects.equals(mxr, that.mxr) && Objects.equals(mxf, that.mxf) && Objects.equals(verfm, that.verfm);
+=======
+        Application application = (Application) o;
+        return Objects.equals(logic, application.logic) && Objects.equals(serial, application.serial) && Objects.equals(model, application.model) && Objects.equals(sam, application.sam) && Objects.equals(ptid, application.ptid) && Objects.equals(plat, application.plat) && Objects.equals(version, application.version) && Objects.equals(mxr, application.mxr) && Objects.equals(mxf, application.mxf) && Objects.equals(verfm, application.verfm);
+>>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16
     }
 
     @Override
     public int hashCode() {
+<<<<<<< HEAD
         return Objects.hash(id, logic, serial, model, sam, ptid, plat, version, mxr, mxf, verfm);
     }
 
@@ -159,3 +203,9 @@ public class Application implements Serializable {
                 '}';
     }
 }
+=======
+        return Objects.hash(logic, serial, model, sam, ptid, plat, version, mxr, mxf, verfm);
+    }
+>>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16:src/main/java/com/testetecnicomuxi/teste/domain/Application.java
+}
+>>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16
