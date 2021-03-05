@@ -3,7 +3,7 @@ package com.testetecnicomuxi.teste.domain;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Terminal implements Serializable {
+public class Application implements Serializable {
     private static final long serialVersionUID = 1L;
     private Integer logic;
     private String serial;
@@ -16,11 +16,11 @@ public class Terminal implements Serializable {
     private Integer mxf;
     private String verfm;
 
-    public Terminal(){
+    public Application(){
 
     }
 
-    public Terminal(Integer logic, String serial, String model, Integer sam, String ptid, Integer plat, String version, Integer mxr, Integer mxf, String verfm) {
+    public Application(Integer logic, String serial, String model, Integer sam, String ptid, Integer plat, String version, Integer mxr, Integer mxf, String verfm) {
         this.logic = logic;
         this.serial = serial;
         this.model = model;
@@ -117,8 +117,8 @@ public class Terminal implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Terminal terminal = (Terminal) o;
-        return Objects.equals(logic, terminal.logic) && Objects.equals(serial, terminal.serial) && Objects.equals(model, terminal.model) && Objects.equals(sam, terminal.sam) && Objects.equals(ptid, terminal.ptid) && Objects.equals(plat, terminal.plat) && Objects.equals(version, terminal.version) && Objects.equals(mxr, terminal.mxr) && Objects.equals(mxf, terminal.mxf) && Objects.equals(verfm, terminal.verfm);
+        Application application = (Application) o;
+        return Objects.equals(logic, application.logic) && Objects.equals(serial, application.serial) && Objects.equals(model, application.model) && Objects.equals(sam, application.sam) && Objects.equals(ptid, application.ptid) && Objects.equals(plat, application.plat) && Objects.equals(version, application.version) && Objects.equals(mxr, application.mxr) && Objects.equals(mxf, application.mxf) && Objects.equals(verfm, application.verfm);
     }
 
     @Override
