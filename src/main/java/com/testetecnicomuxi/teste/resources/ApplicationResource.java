@@ -34,7 +34,8 @@ public class ApplicationResource {
     public ResponseEntity<Void> insert(@RequestBody ApplicationDTO objDTO){
         Application app = service.fromDTO(objDTO);
         app = service.insert(app);
-        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(app.getId()).toUri();
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}").buildAndExpand(app.getId()).toUri();
         return ResponseEntity.created(uri).build();
 
     }
