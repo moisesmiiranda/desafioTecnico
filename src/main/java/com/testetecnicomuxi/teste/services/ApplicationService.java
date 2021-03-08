@@ -1,33 +1,26 @@
 package com.testetecnicomuxi.teste.services;
 
-import com.testetecnicomuxi.teste.domain.Application;
-import com.testetecnicomuxi.teste.dto.ApplicationDTO;
-import com.testetecnicomuxi.teste.repository.ApplicationRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationListener;
-import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.testetecnicomuxi.teste.domain.Application;
+import com.testetecnicomuxi.teste.repository.ApplicationRepository;
+
 @Service
 public class ApplicationService {
-
-    @Autowired
-    private ApplicationRepository repo;
-
-    List<Application> list = new ArrayList<>();
-
-    public List<Application> findAll(){
-        return repo.findAll();
-    }
-
-    public Application insert(Application app){
-        return repo.insert(app);
-    }
-//Integer logic, String serial, String model, Integer sam, String ptid, Integer plat, String version, Integer mxr, Integer mxf, String verf
-    public Application fromDTO(ApplicationDTO objDto){
-        return new Application(objDto.getId(),objDto.getLogic(), objDto.getSerial(), objDto.getModel(), objDto.getSam(), objDto.getPtid(), objDto.getPlat(), objDto.getVersion(), objDto.getMxr(), objDto.getMxf(), objDto.getVerfm());
-    }
-
+	private List<Application> listApp = new ArrayList();
+	
+	
+	public ResponseEntity<List<Application>> save(Application app){
+		listApp.add(app);
+		return ResponseEntity.ok().body(listApp);
+	}
+	
+	public ResponseEntity<List<Application>> returnList(){
+		return ResponseEntity.ok().body(listApp);
+	}
+	
 }

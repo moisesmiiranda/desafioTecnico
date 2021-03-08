@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.testetecnicomuxi.teste.domain;
 
 import org.springframework.data.annotation.Id;
@@ -7,28 +6,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.io.Serializable;
 import java.util.Objects;
 
-@Document
 public class Application implements Serializable {
-    private static final long serialVersionUID = 1L;
-
-    @Id
-    private long id;
-=======
-package com.testetecnicomuxi.teste.dto;
-
-import java.io.Serializable;
-
-<<<<<<< HEAD:src/main/java/com/testetecnicomuxi/teste/dto/ApplicationDTO.java
-public class ApplicationDTO implements Serializable {
-
-    private long id;
-
-=======
-public class Application implements Serializable {
-    private static final long serialVersionUID = 1L;
->>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16:src/main/java/com/testetecnicomuxi/teste/domain/Application.java
->>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16
-    private Integer logic;
+	private static final long serialVersionUID = 1L;
+	
+	private Integer logic;
     private String serial;
     private String model;
     private Integer sam;
@@ -38,174 +19,194 @@ public class Application implements Serializable {
     private Integer mxr;
     private Integer mxf;
     private String verfm;
-
-<<<<<<< HEAD
+    
     public Application() {
-
+    	
     }
 
-    public Application(long id, Integer logic, String serial, String model, Integer sam, String ptid, Integer plat, String version, Integer mxr, Integer mxf, String verfm) {
-        this.id = id;
-=======
-<<<<<<< HEAD:src/main/java/com/testetecnicomuxi/teste/dto/ApplicationDTO.java
-    public ApplicationDTO(){
+	public Application( Integer logic, String serial, String model, Integer sam, String ptid, Integer plat,
+			String version, Integer mxr, Integer mxf, String verfm) {
+		super();
+		this.logic = logic;
+		this.serial = serial;
+		this.model = model;
+		this.sam = sam;
+		this.ptid = ptid;
+		this.plat = plat;
+		this.version = version;
+		this.mxr = mxr;
+		this.mxf = mxf;
+		this.verfm = verfm;
+	}
 
-    }
 
-    public ApplicationDTO(long id, Integer logic, String serial, String model, Integer sam, String ptid, Integer plat, String version, Integer mxr, Integer mxf, String verfm) {
-        this.id = id;
-=======
-    public Application(){
+	public Integer getLogic() {
+		return logic;
+	}
 
-    }
+	public void setLogic(Integer logic) {
+		this.logic = logic;
+	}
 
-    public Application(Integer logic, String serial, String model, Integer sam, String ptid, Integer plat, String version, Integer mxr, Integer mxf, String verfm) {
->>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16:src/main/java/com/testetecnicomuxi/teste/domain/Application.java
->>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16
-        this.logic = logic;
-        this.serial = serial;
-        this.model = model;
-        this.sam = sam;
-        this.ptid = ptid;
-        this.plat = plat;
-        this.version = version;
-        this.mxr = mxr;
-        this.mxf = mxf;
-        this.verfm = verfm;
-    }
+	public String getSerial() {
+		return serial;
+	}
 
-    public long getId() {
-        return id;
-    }
+	public void setSerial(String serial) {
+		this.serial = serial;
+	}
 
-    public void setId(long id) {
-        this.id = id;
-    }
+	public String getModel() {
+		return model;
+	}
 
-    public Integer getLogic() {
-        return logic;
-    }
+	public void setModel(String model) {
+		this.model = model;
+	}
 
-    public void setLogic(Integer logic) {
-        this.logic = logic;
-    }
+	public Integer getSam() {
+		return sam;
+	}
 
-    public String getSerial() {
-        return serial;
-    }
+	public void setSam(Integer sam) {
+		this.sam = sam;
+	}
 
-    public void setSerial(String serial) {
-        this.serial = serial;
-    }
+	public String getPtid() {
+		return ptid;
+	}
 
-    public String getModel() {
-        return model;
-    }
+	public void setPtid(String ptid) {
+		this.ptid = ptid;
+	}
 
-    public void setModel(String model) {
-        this.model = model;
-    }
+	public Integer getPlat() {
+		return plat;
+	}
 
-    public Integer getSam() {
-        return sam;
-    }
+	public void setPlat(Integer plat) {
+		this.plat = plat;
+	}
 
-    public void setSam(Integer sam) {
-        this.sam = sam;
-    }
+	public String getVersion() {
+		return version;
+	}
 
-    public String getPtid() {
-        return ptid;
-    }
+	public void setVersion(String version) {
+		this.version = version;
+	}
 
-    public void setPtid(String ptid) {
-        this.ptid = ptid;
-    }
+	public Integer getMxr() {
+		return mxr;
+	}
 
-    public Integer getPlat() {
-        return plat;
-    }
+	public void setMxr(Integer mxr) {
+		this.mxr = mxr;
+	}
 
-    public void setPlat(Integer plat) {
-        this.plat = plat;
-    }
+	public Integer getMxf() {
+		return mxf;
+	}
 
-    public String getVersion() {
-        return version;
-    }
+	public void setMxf(Integer mxf) {
+		this.mxf = mxf;
+	}
 
-    public void setVersion(String version) {
-        this.version = version;
-    }
+	public String getVerfm() {
+		return verfm;
+	}
 
-    public Integer getMxr() {
-        return mxr;
-    }
+	public void setVerfm(String verfm) {
+		this.verfm = verfm;
+	}
 
-    public void setMxr(Integer mxr) {
-        this.mxr = mxr;
-    }
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((logic == null) ? 0 : logic.hashCode());
+		result = prime * result + ((model == null) ? 0 : model.hashCode());
+		result = prime * result + ((mxf == null) ? 0 : mxf.hashCode());
+		result = prime * result + ((mxr == null) ? 0 : mxr.hashCode());
+		result = prime * result + ((plat == null) ? 0 : plat.hashCode());
+		result = prime * result + ((ptid == null) ? 0 : ptid.hashCode());
+		result = prime * result + ((sam == null) ? 0 : sam.hashCode());
+		result = prime * result + ((serial == null) ? 0 : serial.hashCode());
+		result = prime * result + ((verfm == null) ? 0 : verfm.hashCode());
+		result = prime * result + ((version == null) ? 0 : version.hashCode());
+		return result;
+	}
 
-    public Integer getMxf() {
-        return mxf;
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Application other = (Application) obj;
+		if (logic == null) {
+			if (other.logic != null)
+				return false;
+		} else if (!logic.equals(other.logic))
+			return false;
+		if (model == null) {
+			if (other.model != null)
+				return false;
+		} else if (!model.equals(other.model))
+			return false;
+		if (mxf == null) {
+			if (other.mxf != null)
+				return false;
+		} else if (!mxf.equals(other.mxf))
+			return false;
+		if (mxr == null) {
+			if (other.mxr != null)
+				return false;
+		} else if (!mxr.equals(other.mxr))
+			return false;
+		if (plat == null) {
+			if (other.plat != null)
+				return false;
+		} else if (!plat.equals(other.plat))
+			return false;
+		if (ptid == null) {
+			if (other.ptid != null)
+				return false;
+		} else if (!ptid.equals(other.ptid))
+			return false;
+		if (sam == null) {
+			if (other.sam != null)
+				return false;
+		} else if (!sam.equals(other.sam))
+			return false;
+		if (serial == null) {
+			if (other.serial != null)
+				return false;
+		} else if (!serial.equals(other.serial))
+			return false;
+		if (verfm == null) {
+			if (other.verfm != null)
+				return false;
+		} else if (!verfm.equals(other.verfm))
+			return false;
+		if (version == null) {
+			if (other.version != null)
+				return false;
+		} else if (!version.equals(other.version))
+			return false;
+		return true;
+	}
 
-    public void setMxf(Integer mxf) {
-        this.mxf = mxf;
-    }
+	@Override
+	public String toString() {
+		return "Application [logic=" + logic + ", serial=" + serial + ", model=" + model + ", sam=" + sam + ", ptid="
+				+ ptid + ", plat=" + plat + ", version=" + version + ", mxr=" + mxr + ", mxf=" + mxf + ", verfm="
+				+ verfm + "]";
+	}
 
-    public String getVerfm() {
-        return verfm;
-    }
+	
+    
 
-    public void setVerfm(String verfm) {
-        this.verfm = verfm;
-    }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:src/main/java/com/testetecnicomuxi/teste/dto/ApplicationDTO.java
-=======
->>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-<<<<<<< HEAD
-        Application that = (Application) o;
-        return id == that.id && Objects.equals(logic, that.logic) && Objects.equals(serial, that.serial) && Objects.equals(model, that.model) && Objects.equals(sam, that.sam) && Objects.equals(ptid, that.ptid) && Objects.equals(plat, that.plat) && Objects.equals(version, that.version) && Objects.equals(mxr, that.mxr) && Objects.equals(mxf, that.mxf) && Objects.equals(verfm, that.verfm);
-=======
-        Application application = (Application) o;
-        return Objects.equals(logic, application.logic) && Objects.equals(serial, application.serial) && Objects.equals(model, application.model) && Objects.equals(sam, application.sam) && Objects.equals(ptid, application.ptid) && Objects.equals(plat, application.plat) && Objects.equals(version, application.version) && Objects.equals(mxr, application.mxr) && Objects.equals(mxf, application.mxf) && Objects.equals(verfm, application.verfm);
->>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16
-    }
-
-    @Override
-    public int hashCode() {
-<<<<<<< HEAD
-        return Objects.hash(id, logic, serial, model, sam, ptid, plat, version, mxr, mxf, verfm);
-    }
-
-    @Override
-    public String toString() {
-        return "Application{" +
-                "id=" + id +
-                ", logic=" + logic +
-                ", serial='" + serial + '\'' +
-                ", model='" + model + '\'' +
-                ", sam=" + sam +
-                ", ptid='" + ptid + '\'' +
-                ", plat=" + plat +
-                ", version='" + version + '\'' +
-                ", mxr=" + mxr +
-                ", mxf=" + mxf +
-                ", verfm='" + verfm + '\'' +
-                '}';
-    }
 }
-=======
-        return Objects.hash(logic, serial, model, sam, ptid, plat, version, mxr, mxf, verfm);
-    }
->>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16:src/main/java/com/testetecnicomuxi/teste/domain/Application.java
-}
->>>>>>> 264aec533a0a8adcaeca3d53442dfb0743ee0e16
